@@ -1,0 +1,37 @@
+mutation {
+  insert_agegroups(objects: [
+    { title: "Young Adults", ages: "18-29"},
+    { title: "Adults", ages: "30-39"},
+    { title: "Middle-aged Adults", ages: "40-49"},
+    { title: "Older Adults", ages: "50-59"},
+    { title: "Seniors", ages: "60-99"}
+  ]) {
+    affected_rows
+  }
+}
+
+mutation {
+  insert_subjects(objects: [
+    { id: 1, color: "blue", title: "Entertainment"},
+    { id: 2, color: "mediumvioletred", title: "Arts"},
+    { id: 3, color: "gold", title: "History"},
+    { id: 4, color: "brown", title: "Science"},
+    { id: 5, color: "green", title: "Sports"},
+    { id: 6, color: "orange", title: "Geography"},
+  ]) {
+    affected_rows
+  }
+}
+
+mutation {
+  insert_questions(objects: [
+    { question: "How many teeth does an adult human have?", answer1: "30", answer2: "32 (*)", answer3: "34", correct: 2, subject_id: 4},
+    { question: "Which member of the Beatles married Yoko Ono?", answer1: "John Lennon (*)", answer2: "Ringo Star", answer3: "McCartney", correct: 1, subject_id: 1},
+    { question: "Who was the first man to walk on the moon?", answer1: "Joeri Gagarin", answer2: "Neil Armstrong (*)", answer3: "John Glenn", correct: 2, subject_id: 3},
+    { question: "In which city is The Louvre art museum located?", answer1: "Paris (*)", answer2: "London", answer3: "New York", correct: 1, subject_id: 2},
+    { question: "What sport is dubbed the king of sports?", answer1: "athletics", answer2: "soccer (*)", answer3: "tennis", correct: 2, subject_id: 5},
+    { question: "What is Earth's largest continent?", answer1: "Asia (*)", answer2: "Europe", answer3: "Afrika", correct: 1, subject_id: 6}
+  ]) {
+    affected_rows
+  }
+}
