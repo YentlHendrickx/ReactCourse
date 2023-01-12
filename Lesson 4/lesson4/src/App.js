@@ -1,9 +1,10 @@
+import WeatherForecast from './components/WeatherForecast';
 import WeatherList from './components/weather_list';
 
 function App() {
   return (
     <div>
-      <WeatherList/>
+      <WeatherForecast/>
     </div>
   );
 }
